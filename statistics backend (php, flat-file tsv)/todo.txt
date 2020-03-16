@@ -1,0 +1,5 @@
+[ ]	visits per day
+[ ]	most popular urls
+[ ]	visits per week
+[ ]	desktop/mobile ratio
+[ ]	standardised report set
