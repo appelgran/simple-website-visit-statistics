@@ -17,7 +17,24 @@ Simple and good website visits statistics. Self-hosted with various technologies
   * Queries API backend and sends an email with a statistics report (weekly/monthly)
 
 ## API backend reference
-* Visits per day
-*	Most popular urls
-*	Visits per week
-*	Desktop/mobile ratio
+* visitspermonth
+  * parameters: month=YYYYMM
+  * return value: int
+* visitsperweek
+  * parameters: week=YYYYWW
+  * return value: int
+* visitsperday
+  * parameters: day=YYYYMMDD
+  * return value: int
+* mostvisited
+  * parameters: day_start=YYYYMMDD, day_end=YYYYMMDD, limit=[0-9]+, filter=urlname/*
+  * return value: JSON, array of objects, {[{"url":"...", "count":...}, ...]}
+* mostreferrer
+  * parameters: day_start=YYYYMMDD, day_end=YYYYMMDD, limit=[0-9]*
+  * return value: JSON, array of objects, {[{"referrer":"...", "count":...}, ...]}
+* devicetypes
+  * parameters: day_start=YYYYMMDD, day_end=YYYYMMDD, tresholds=[0-9]+,[0-9]+,...
+  * return value: JSON, object with key "percents" and "numbers" to arrays of objects
+* mostreferrer
+  * parameters: day_start=YYYYMMDD, day_end=YYYYMMDD, limit=[0-9]*
+  * return value: JSON, array of objects, {[{"referrer":"...", "count":...}, ...]}
